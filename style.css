@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(210, 234, 255);
+    margin:0 auto;
+}
+
+.buttons {
+    margin: 0 auto;
+    background: rgb(231, 170, 159);
+    text-align: center;
+    padding:1%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    width: 20%;
+    float:inherit;
+    padding-bottom: 1.9%;
+}
+
+.button {
+    border-style: solid;
+    border-color: rgb(66, 221, 213);
+    background: rgb(199, 228, 225);
+    padding:0.7%;
+    margin:0.5%;
+    text-decoration: none;
+    color:black;
+}
+
+a:hover {
+    border-color: rgb(4, 77, 58);
+}
+
+.current {
+    border-color:rgb(4, 77, 58) !important; 
+}
+
+#leftsidebar {
+    background-color: rgb(211, 151, 141);
+    width: 40%;
+    float: left;
+}
+
+#rightsidebar {
+    background-color: rgb(211, 151, 141);
+    width: 40%;
+    float: right;
+    text-align: right;
+    margin:0;
+}
+
+.container {
+    text-align:center;
+    display:flex;
+    height: 2.8%;
+    justify-content: space-between;
+}
+
+
+
