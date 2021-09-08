@@ -4,15 +4,15 @@ body {
 }
 
 .buttons {
-    margin: 0 auto;
+    margin: 0;
     background: rgb(231, 170, 159);
     text-align: center;
     padding:1%;
     border-bottom-left-radius: 10%;
     border-bottom-right-radius: 10%;
-    width: 20%;
-    float:inherit;
-    padding-bottom: 1.9%;
+    padding-bottom: 4.6%;
+    padding-top:0.5%;
+    height: 20%;
 }
 
 .button {
@@ -21,8 +21,14 @@ body {
     background: rgb(199, 228, 225);
     padding:0.7%;
     margin:0.5%;
+    margin-top:0.5%;
     text-decoration: none;
     color:black;
+    display: inline-table;
+    border-bottom-left-radius: 15%;
+    border-top-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    border-top-right-radius: 15%;
 }
 
 a:hover {
@@ -35,16 +41,20 @@ a:hover {
 
 #leftsidebar {
     background-color: rgb(211, 151, 141);
-    width: 40%;
+    width: 50%;
     float: left;
+    height: 150%;
+    border-bottom-left-radius: 15%;
 }
 
 #rightsidebar {
     background-color: rgb(211, 151, 141);
-    width: 40%;
+    width: 50%;
     float: right;
     text-align: right;
     margin:0;
+    height: 150%;
+    border-bottom-right-radius: 15%;
 }
 
 .container {
@@ -52,6 +62,25 @@ a:hover {
     display:flex;
     height: 2.8%;
     justify-content: space-between;
+}
+
+.textScreen {
+    float:inherit;
+    background-color: white;
+    text-align: center;
+    margin-right: 35%;
+    margin-left: 35%;
+    height: 75%;
+    border-bottom-left-radius: 15%;
+    border-top-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    border-top-right-radius: 15%;
+    padding:1%;
+    box-shadow: 10px 10px 5px grey;
+}
+
+h1,p {
+    font-family:'Comic Sans MS', 'Comic Sans', cursive;
 }
 
 
