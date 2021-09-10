@@ -4,21 +4,18 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Gosha Club</title>
+  <title>VUE JS Demo</title>
   <script src='https://unpkg.com/vue@2.2.6'></script>
 </head>
 
 <body>
 
 <div id="app">
-  <h2>Todos:</h2>
+  <h2>List DEMO:</h2>
   <ol>
     <li v-for="todo in todos">
       <label>
-        <input type="checkbox"
-          v-on:change="toggle(todo)"
-          v-bind:checked="todo.done">
-
+        <input type="checkbox" v-on:change="toggle(todo)" v-bind:checked="todo.done">
         <del v-if="todo.done">
           {{ todo.text }}
         </del>
@@ -29,15 +26,29 @@
     </li>
   </ol>
 
-  <input type="number" v-model.number="rows"></input> <br> <span>ROWS is {{ rows }}</span>
+  <h2>Table DEMO:</h2>
+  <table style="padding: 8px;">
+    <tr>
+      <td>Rows</td>
+      <td><input type="number" v-model.number="rows"></input> </td>
+    </tr>
+    <tr>
+      <td>Cols</td>
+      <td><input type="number" v-model.number="cols"></input></td>
+    </tr>
+    <tr>
+      <td>Content</td>
+      <td><input v-model="content"></input></td>
+    </tr>
+  </table>  
+  <table>
+    <tr v-for="r in rows">
+       <td v-for="c in cols" style="padding: 8px; border: 1px solid orange;">
+          {{ content }}
+       </td> 
+    </tr>
+  </table>
 
-
-
-  <ol>
-    <li v-for="i in rows">
-      Row {{ i }}
-    </li>
-  </ol>
 </div>
 
 <script>
@@ -45,13 +56,15 @@
 new Vue({  
   el: "#app",
   data: {
-    rows: 5,
+    rows: 3,
+    cols: 14,
+    content: '',
     todos: [
+      { text: "Learn HTML", done: false },
+      { text: "Learn CSS", done: false },
       { text: "Learn JavaScript", done: false },
-      { text: "Learn Vue", done: false },
-      { text: "Learn HTML", done: true },
-      { text: "Build something awesome", done: true },
-      { text: "Use CSS", done: false }
+      { text: "Learn Vue", done: false },      
+      { text: "Build something awesome", done: false },    
     ]
   },
   methods: {
