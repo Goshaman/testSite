@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gosha Club</title>
+  <script src='https://unpkg.com/vue@2.2.6'></script>
+</head>
+
+<body>
+
+<div id="app">
+  <h2>Todos:</h2>
+  <ol>
+    <li v-for="todo in todos">
+      <label>
+        <input type="checkbox"
+          v-on:change="toggle(todo)"
+          v-bind:checked="todo.done">
+
+        <del v-if="todo.done">
+          {{ todo.text }}
+        </del>
+        <span v-else>
+          {{ todo.text }}
+        </span>
+      </label>
+    </li>
+  </ol>
+
+  <input type="number" v-model.number="rows"></input> <br> <span>ROWS is {{ rows }}</span>
+
+
+
+  <ol>
+    <li v-for="i in rows">
+      Row {{ i }}
+    </li>
+  </ol>
+</div>
+
+<script>
+
+new Vue({  
+  el: "#app",
+  data: {
+    rows: 5,
+    todos: [
+      { text: "Learn JavaScript", done: false },
+      { text: "Learn Vue", done: false },
+      { text: "Learn HTML", done: true },
+      { text: "Build something awesome", done: true },
+      { text: "Use CSS", done: false }
+    ]
+  },
+  methods: {
+    toggle: function(todo){
+      todo.done = !todo.done
+    }
+  }
+})
+
+</script>
+
+
+</body>
+
+</html>
